@@ -18,12 +18,16 @@ header{
 nav{
     display: flex;
     justify-content: space-around;
+    align-items: center;
     padding: 1%;
     height: 100%;
     width: 100%;
 
 }
-
+img {
+    max-width: 100%;
+    height: 100%;
+}
 .login {
     padding:0.5rem;
     border-radius: 0.5rem;
@@ -37,22 +41,36 @@ nav{
     color: white;
     padding: 5%;
     border-radius: 0.2rem;
-    width: 15rem;
+    max-width: 100%;
 
 }
 
 a {
  text-decoration: none;
- color: white;
+
 
 }
-a:hover{ color: aqua;}
+.top_link{
+    color: white;
+}
+
+a:hover{
+    color: aqua;
+}
+
+.login:hover {
+    color: black;
+}
 .hyperlinks {
     display: flex;
     justify-content: space-between;
     width: 40%;
 }
-
+p {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    letter-spacing: 1px;
+}
 
 main {
     width: 100%;
@@ -75,23 +93,34 @@ article{
 .contact_info {
     background-color: #21496c;
     border-radius: 1rem;
-    padding: 5%;
+    padding:3%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 }
 ul {
     list-style: none;
+    margin-right: 1rem;
+}
+ul::before{
+    margin-right: 1rem;
 }
 ul > li::before {
     list-style: none;
     content: "-";
-    margin-right: 0.2rem;
+    margin-right: 0.5rem;
 }
 
 footer {
     background-color: rgb(30, 30, 30);
     height: 20vh;
     display: grid;
-    grid-template-columns: 20% 30% 25%;
+    grid-template-columns: 20% 30% 25% 1fr;
+    gap: 5%;
+    padding: 1%;
+}
+
+.bottom_links {
+    color: aqua;
 }
