@@ -103,15 +103,13 @@ article{
 }
 ul {
     list-style: none;
-    margin-right: 1rem;
+    margin-left: 3rem;
 }
-ul::before{
-    margin-right: 1rem;
-}
+
 ul > li::before {
     list-style: none;
     content: "-";
-    margin-right: 0.5rem;
+    margin-left: 0.5rem;
 }
 
 footer {
@@ -148,8 +146,11 @@ footer {
     width: 50%;
     height: 50%;
     border-radius: 1rem;
+    padding: 1%;
 }
 
 .bottom_link:hover {
     color: black;
 }
+
+
