@@ -80,11 +80,12 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     margin-top: 5%;
 }
+
 section {
     max-width: 50%;
+    align-self: center;
 }
 
 article{
@@ -101,6 +102,16 @@ article{
     align-items: center;
     justify-content: space-between;
 }
+.movie_link, .movie_link:hover{
+    background-color: aqua;
+    padding: 2%;
+    border-radius: 0.5rem;
+    font-size: larger;
+    font-weight: 600;
+    color: black;
+    margin:1rem;
+}
+
 ul {
     list-style: none;
     margin-left: 3rem;
@@ -153,4 +164,54 @@ footer {
     color: black;
 }
 
+.movie {
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    align-self: center;
+}
 
+.movie-list {
+    display:flex ;
+    gap: 1rem;
+    padding: 1%;
+}
+
+.overlay_content {
+     position: relative;
+     display: flex;
+}
+
+.overlay {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+.movie_description {
+    width: 100%;
+    justify-self: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: larger;
+    font-weight: 500;
+    background:linear-gradient(0deg, rgba(29, 29, 29, .7) 0, rgba(29, 29, 29, .7) 60%, rgba(29, 29, 29, 0) 100%)
+
+}
+.overlay>h1 {
+    margin: 0.5rem;
+}
+
+.overlay:hover {
+    background: black;
+    opacity: 50%;
+
+    .movie_description{
+        background-color: hsla(0, 0%, 100%, 0.897);
+        white-space: nowrap;
+        max-width: 90%;
+        scroll-behavior: smooth;
+}
+}
