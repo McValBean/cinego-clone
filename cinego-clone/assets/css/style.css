@@ -191,27 +191,47 @@ footer {
     height: 100%;
 }
 .movie_description {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     justify-self: center;
+    justify-content:center;
     padding: 1rem;
-    border-radius: 0.5rem;
     font-size: larger;
     font-weight: 500;
     background:linear-gradient(0deg, rgba(29, 29, 29, .7) 0, rgba(29, 29, 29, .7) 60%, rgba(29, 29, 29, 0) 100%)
 
 }
+.info {
+    display: flex;
+    font-family: pathway extreme;
+}
+
+.info> a {
+    background-color:hsla(180, 57%, 65%, 0.548) ;
+    padding: 0.2rem;
+    color: aqua;
+    border-radius: 0.5rem;
+    margin-right: 0.5rem;
+}
 .overlay>h1 {
     margin: 0.5rem;
+
 }
 
 .overlay:hover {
-    background: black;
-    opacity: 50%;
+
+
+
 
     .movie_description{
-        background-color: hsla(0, 0%, 100%, 0.897);
-        white-space: nowrap;
         max-width: 90%;
-        scroll-behavior: smooth;
+        opacity: 200%;
+        border-radius: 0.5rem;
+        background: hsl(100, 67%, 96%, 0.1);
+
+}
+.main_image {
+    transform: scale(110%);
 }
 }
