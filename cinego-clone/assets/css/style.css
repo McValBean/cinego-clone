@@ -178,8 +178,9 @@ footer {
 
 .movie-list {
     display:flex ;
-    gap: 1rem;
+    gap: 0.5rem;
     padding: 1%;
+    flex-wrap: wrap;
 }
 
 .overlay_content {
@@ -194,6 +195,7 @@ footer {
     justify-content: space-between;
     width: 100%;
     height: 100%;
+
 }
 
 .movie_description {
@@ -205,6 +207,7 @@ footer {
     padding: 1rem;
     font-size: larger;
     font-weight: 500;
+    color: white;
     background:linear-gradient(0deg, rgba(29, 29, 29, .7) 0, rgba(29, 29, 29, .7) 60%, rgba(29, 29, 29, 0) 100%)
 
 }
@@ -222,13 +225,27 @@ footer {
     font-size: 1rem;
 }
 
+.top-overlay{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.bookmark {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
 .overlay>h1 {
     margin: 0.5rem;
 
 }
+.overlay{
+    color: white;
+}
 
 .overlay:hover {
-
 
 
 
@@ -237,10 +254,9 @@ footer {
         opacity: 200%;
         border-radius: 0.5rem;
         background: hsl(100, 67%, 96%, 0.1);
-        fill-opacity: 1rem;
 
 }
 .main_image {
-    transform: scale(110%);
+    background:linear-gradient(0deg, rgba(29, 29, 29, .7) 0, rgba(29, 29, 29, .7) 60%, rgba(29, 29, 29, 0) 100%)
 }
 }
