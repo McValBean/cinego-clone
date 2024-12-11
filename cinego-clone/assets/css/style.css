@@ -52,6 +52,7 @@ a {
 
 
 }
+
 .top_link{
     color: white;
 }
@@ -171,6 +172,10 @@ footer {
     align-self: center;
 }
 
+.top_link.active_page {
+    color: aqua;
+}
+
 .movie-list {
     display:flex ;
     gap: 1rem;
@@ -190,6 +195,7 @@ footer {
     width: 100%;
     height: 100%;
 }
+
 .movie_description {
     display: flex;
     flex-direction: column;
@@ -207,13 +213,15 @@ footer {
     font-family: pathway extreme;
 }
 
-.info> a {
+.info> span {
     background-color:hsla(180, 57%, 65%, 0.548) ;
     padding: 0.2rem;
     color: aqua;
     border-radius: 0.5rem;
-    margin-right: 0.5rem;
+    margin: 0 0.5rem 0.2rem 0;
+    font-size: 1rem;
 }
+
 .overlay>h1 {
     margin: 0.5rem;
 
@@ -229,6 +237,7 @@ footer {
         opacity: 200%;
         border-radius: 0.5rem;
         background: hsl(100, 67%, 96%, 0.1);
+        fill-opacity: 1rem;
 
 }
 .main_image {
