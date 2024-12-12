@@ -172,7 +172,7 @@ footer {
     align-self: center;
 }
 
-.top_link.active_page {
+.active_page {
     color: aqua;
 }
 
@@ -203,7 +203,7 @@ footer {
     flex-direction: column;
     width: 100%;
     justify-self: center;
-    justify-content:center;
+    justify-content: center;
     padding: 1rem;
     font-size: larger;
     font-weight: 500;
@@ -229,6 +229,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    justify-self: center;
 
 }
 
@@ -247,16 +248,16 @@ footer {
 
 .overlay:hover {
 
+    .movie_description {
 
-
-    .movie_description{
+        -webkit-backdrop-filter: blur(1rem);
+        backdrop-filter: blur(1rem);
         max-width: 90%;
         opacity: 200%;
         border-radius: 0.5rem;
         background: hsl(100, 67%, 96%, 0.1);
 
 }
-.main_image {
-    background:linear-gradient(0deg, rgba(29, 29, 29, .7) 0, rgba(29, 29, 29, .7) 60%, rgba(29, 29, 29, 0) 100%)
 }
-}
+
+
