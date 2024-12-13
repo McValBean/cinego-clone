@@ -258,6 +258,9 @@ footer {
         background: hsl(100, 67%, 96%, 0.1);
 
 }
+.main_image {
+    transform: scale(2);
+}
 }
 
 
