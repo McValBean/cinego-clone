@@ -1,7 +1,5 @@
 console.log("we did it");
 
-const homeHeaderBackground = document.getElementsByClassName("home-header");
-
 const homeMovieList = document.getElementById("home-top-movies");
 const homeTVShowsList = document.getElementById("home-top-series");
 
