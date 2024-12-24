@@ -7,7 +7,7 @@
 }
 
 
-.home_header{
+.home-header{
 
     width: 96%;
     justify-self: center;
@@ -15,15 +15,11 @@
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("assets\images\sleeping-princess.jpg");
+    background-image: url("assets/images/breaking-bad.jpg");                                    ;
 
 }
 
-.home_header_container{
-    display: flex;
-    flex-direction: column;
 
-}
 .top-rated-heading{
     display: flex;
     gap: 1%;
@@ -84,9 +80,21 @@
     border-radius: 1rem;
     box-shadow: 0px 2rem 2rem rgb(40, 40, 40);
 }
+.top-rated-movies{
+    display: flex;
+    flex-direction: column;
+    
+}
+.top-rated-movies>* {
+    margin: 2rem;
+}
 
 .top-rated-series {
     display: none;
+
+}
+.top-rated-series>* {
+    margin: 1rem;
 }
 
 
@@ -101,9 +109,7 @@ body {
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     background: rgb(10, 10, 10);
 }
-header {
-    background-color: black;
-}
+
 
 
 .latest>ul{
@@ -223,7 +229,7 @@ article{
     margin:1rem;
 }
 
-ul {
+ .unordered-list-index{
     list-style: none;
     margin-left: 3rem;
 }
@@ -372,9 +378,7 @@ footer {
 
 }
 
-.main_image {
-    transform: scale(2);
-}
+
 }
 
 .series {
@@ -409,13 +413,14 @@ footer {
     flex-direction: column;
     align-items:center;
 
-
 }
 .series-episode>:first-child {
  width: 90%;
  margin-top: 1rem;
  display: grid;
  grid-template-columns:70% 30% ;
+ margin-bottom: 1rem;
+
 
 
 }
@@ -425,6 +430,35 @@ flex-direction: column;
 justify-content: center;
 }
 
+.video-bottom{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    background-color: rgb(30, 30, 30);
+}
+.server-upload>*{
+    margin: 1rem;
+}
+.server-select{
+    color: aqua;
+}
+#select-server{
+    background-color: rgb(30, 30, 30);
+    color: aqua;
+    border: none;
+}
+
+.server-note{
+    opacity: 50%;
+}
+.toggle-watch-comment{
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
 .episode-side {
     background-color: rgb(30, 30, 30);
 }
@@ -448,7 +482,7 @@ justify-content: center;
 .current-episode {
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color: white;
 }
 
 .season-number {
@@ -469,9 +503,32 @@ justify-content: center;
 }
 .episode-list {
     background-color: rgb(40, 40, 40);
-    padding: 1rem 0rem 1rem 0rem;
+    padding: 1rem 0rem 0rem 0rem;
     display: flex;
     flex-direction: column;
-    
-    
 }
+.episode-list>ul{
+    list-style: none;
+}
+
+.episode-number{
+    height: 2rem;
+    display: flex;
+    align-content: center;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+.episode-number:hover {
+    color:white;
+}
+
+.episode-name:before{
+    content:"|";
+    margin: 0 1rem 0 1rem;
+    word-spacing: normal;
+}
+.episode-name {
+    opacity: 50%;
+}
+

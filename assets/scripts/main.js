@@ -24,7 +24,10 @@ document.getElementById("home-top-movies").style.backgroundColor ="black";
 document.getElementById("home-top-series").style.color ="black";
 document.getElementById("home-top-movies").style.color ="white";
 document.getElementById("series-section").style.display = "flex";
+document.getElementById("series-section").style.flexDirection = "column";
 document.getElementById("movies-section").style.display= "none";}
+
+
 
 
 
