@@ -9,14 +9,16 @@
 
 .home-header{
 
-    width: 96%;
+    width: 100%;
     justify-self: center;
     align-content: space-between;
     height: 100%;
     background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url("assets/images/breaking-bad.jpg");                                    ;
+    background-image: url('assets\images\series-pictures\breaking-bad.jpg');
 
+}
+.home-body{
+    background: none;
 }
 
 
