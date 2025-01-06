@@ -7,20 +7,58 @@
 }
 
 
-.home-header{
-
+.home-header-background{
+    position: absolute;
     width: 100%;
     justify-self: center;
     align-content: space-between;
     height: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-image: url('assets\images\series-pictures\breaking-bad.jpg');
 
 }
-.home-body{
-    background: none;
+.blur-background{
+    backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem);
+    background-color: hsla(189, 100%, 25%, 0.7);
+}
+.home-header{
+    position: relative;
 }
 
+
+.trending-content{
+    display: flex;
+    width: 100%;
+    height :100%;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+}
+.trending-content>*{
+    margin:0 1rem 0 1rem;
+    max-width: 40%;
+    height: 100;
+}
+.trending-content-image{
+    border-radius:2rem;
+    width: 150%;
+    height:  150%;
+
+}
+.trending-content-info{
+    height :100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+}
+.trending-content-info>*{
+    margin:0 0 1rem 0;
+
+
+}
 
 .top-rated-heading{
     display: flex;
@@ -58,7 +96,6 @@
 }
 .most-rated-movie >div ,.most-rated-series >div {
     width: 50%;
-    justify-content: stretch;
 }
 
 .most-rated-movie>:first-child>* , .most-rated-series>:first-child>* {
@@ -99,12 +136,6 @@
     margin: 1rem;
 }
 
-
-.blur_background{
-    background-color: hsl(100, 67%, 96%, 0.1);
-    -webkit-backdrop-filter: blur(2px);
-    backdrop-filter: blur(2px);
-}
 
 body {
     color: white;
@@ -291,6 +322,7 @@ footer {
     flex-direction: column;
     max-width: 90%;
     align-self: center;
+    width: 100%;
 }
 
 .active_page {
@@ -298,9 +330,8 @@ footer {
 }
 
 .movie-list {
-    display:flex ;
+    display:flex;
     gap: 0.5rem;
-    padding: 1%;
     flex-wrap: wrap;
 }
 
@@ -326,6 +357,7 @@ footer {
     justify-self: center;
     justify-content: center;
     padding: 1rem;
+    margin: 0;
     font-size: larger;
     font-weight: 500;
     color: white;
