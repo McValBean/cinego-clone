@@ -20,7 +20,7 @@ console.log("5");
 document.getElementById("trending-movies-list").style.display= "flex";
 console.log("6");
 
-homeTrendingMovies.onclick = function(){
+homeTrendingMovies.onclick = function (){
 document.getElementById("home-trending-movies").style.backgroundColor = "aqua";
 document.getElementById("home-trending-movies").style.color = "black";
 document.getElementById("home-trending-series").style.backgroundColor ="black";
@@ -29,7 +29,7 @@ document.getElementById("trending-series-list").style.display = "none";
 document.getElementById("trending-movies-list").style.display= "flex";
 }
 
-homeTrendingSeries.onclick = function(){
+homeTrendingSeries.onclick = function (){
 document.getElementById("home-trending-series").style.backgroundColor="aqua";
 console.log(10);
 document.getElementById("home-trending-movies").style.backgroundColor ="black";
