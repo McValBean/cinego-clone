@@ -72,8 +72,23 @@ let homeHeaderBackground = document.getElementById("homeHeaderBackground");
 let latestImage = document.getElementById("latestImage");
 let latestContentInfo = document.getElementById("")
 let latestContent = [];
-latestContent.
-let
+let previous = document.getElementById("previous");
+let next = document.getElementById("next");
+
+previous.onclick = function (){
+    document.getElementById("trending").Child();
+}
+let toggle = document.getElementById("toggle");
+
+
+toggle.onclick = function (){
+    if(document.getElementsByClassName("series-episode").backgroundColor="rgb(70,70,70)")
+         {
+                document.getElementsByClassName("series-episode").style.backgroundColor="black"
+
+
+    }
+}
 
 
 
