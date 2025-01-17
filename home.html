@@ -10,7 +10,7 @@
 
     <header class="home-header" id="go_top">
         <div>
-            <img src="assets/images/series-pictures/breaking-bad.jpg" alt="breaking-bad" class="home-header-background">
+            <img src="assets/images/series-pictures/breaking-bad.jpg" alt="breaking-bad" class="home-header-background" id="homeHeaderBackground">
         </div>
         <div class="blur-background">
         <nav>
@@ -35,11 +35,11 @@
 
             <div class="latest">
 
-                <ul class="trending"> 
+                <ul class="trending">
                     <li>
                         <div class="trending-content">
                             <div>
-                                <a href="breaking-bad.html"><img src="assets/images/series-pictures/breaking-bad.jpg" alt="breaking-bad" class="trending-content-image"></a>
+                                <a href="breaking-bad.html"><img src="assets/images/series-pictures/breaking-bad.jpg" alt="breaking-bad" class="trending-content-image" id="latestImage"></a>
                                 
                             </div>
                             <div class="trending-content-info">
@@ -50,12 +50,18 @@
                                 </p>
                                 <h1>Breaking Bad</h1>
                                 <span></span>
-                                <p>
+                                <p >
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis neque iusto vitae maxime, quae provident alias aut illum, vero hic incidunt dolorum dolores molestias repudiandae corporis ut nulla distinctio. Exercitationem.
                                 </p>
-                                <span>
-                                    <a href="breaking-bad.html" class="watch">Watch Now</a>
-                                </span>
+                                <div>
+                                    <a href="breaking-bad.html" class="watch">
+                                        <div class="play-icon">
+                                            <img src="assets/icons/play-icon-30.png" width="20px" height="20px" class="play-icon-image" alt="play-icon">
+                                            <div class="play-icon-state"></div>
+                                        </div>
+                                        <div>Watch Now</div>
+                                    </a>
+                                </div>
                                 
                             </div>
                         </div>
@@ -65,9 +71,13 @@
                     <li></li>
                     <li></li>
                 </ul>
-
+                <div>
+                    <div class="content-change">
+                        <a href="" class="change-content-button" id="previous">&gt;</a>
+                        <a href="" class="change-content-button" id="next">&lt; </a>
+                    </div>
+                </div>
             </div>
-
         </div>
 
     </header>
@@ -117,7 +127,7 @@
                             </div>
                         </div>
                         <div>
-                            <a href="gladiator-two.html">
+                            <a href="gladiator-two-details.html">
                             <img src="assets/images/movie pictures/gladiator-two.jpg" alt="gladiator-two" class="most-rated-image">
                             </a>
                         </div>

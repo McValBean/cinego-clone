@@ -8,17 +8,11 @@ const homeTrendingSeries = document.getElementById("home-trending-series");
 
 
 document.getElementById("home-trending-movies").style.backgroundColor = "aqua";
-console.log("1");
 document.getElementById("home-trending-movies").style.color = "black";
-console.log("2")
 document.getElementById("home-trending-series").style.backgroundColor ="black";
-console.log("3")
 document.getElementById("home-trending-series").style.color="white";
-console.log("4");
 document.getElementById("trending-series-list").style.display = "none";
-console.log("5");
 document.getElementById("trending-movies-list").style.display= "flex";
-console.log("6");
 
 homeTrendingMovies.onclick = function (){
 document.getElementById("home-trending-movies").style.backgroundColor = "aqua";
@@ -31,19 +25,12 @@ document.getElementById("trending-movies-list").style.display= "flex";
 
 homeTrendingSeries.onclick = function (){
 document.getElementById("home-trending-series").style.backgroundColor="aqua";
-console.log(10);
 document.getElementById("home-trending-movies").style.backgroundColor ="black";
-console.log(20);
 document.getElementById("home-trending-series").style.color ="black";
-console.log(30);
 document.getElementById("home-trending-movies").style.color ="white";
-console.log(40);
 document.getElementById("trending-series-list").style.display = "flex";
-console.log(50);
 document.getElementById("trending-series-list").style.flexDirection = "column";
-console.log(60);
 document.getElementById("trending-movies-list").style.display= "none";
-console.log(70);
 }
 
 
@@ -79,7 +66,14 @@ document.getElementById("movies-section").style.display= "none";}
 
 
 
+// this is a function to change the background of the home header to match the content being shown on the home header//
 
+let homeHeaderBackground = document.getElementById("homeHeaderBackground");
+let latestImage = document.getElementById("latestImage");
+let latestContentInfo = document.getElementById("")
+let latestContent = [];
+latestContent.
+let
 
 
 
