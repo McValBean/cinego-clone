@@ -1,4 +1,14 @@
+//this code is for the dialog box for the login//
+let login= document.getElementById("openDialog");
+let loginBox = document.getElementById("dialogBox");
+let closeLogin = document.getElementById("closeDIalog");
 
+login.onclick = function() {
+    loginBox.showModal();
+}
+closeLogin.onclick = function() {
+    loginBox.close();
+}
 
 //Below this is for the trending section of the homepage to toggle between movies and series
 
