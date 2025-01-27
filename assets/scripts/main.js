@@ -8,6 +8,7 @@ login.onclick = function() {
 }
 closeLogin.onclick = function() {
     loginBox.close();
+    loginBox.style.boxSizing= "cover";
 }
 
 //Below this is for the trending section of the homepage to toggle between movies and series
