@@ -42,18 +42,18 @@ registerLink.onclick = function() {
 
 //Below this is for the trending section of the homepage to toggle between movies and series//
 
-const homeTrendingMovies = document.getElementById("home-trending-movies");
-const homeTrendingSeries = document.getElementById("home-trending-series");
+const homeTrendingMoviesLink = document.getElementById("home-trending-movies");
+const homeTrendingSeriesLink = document.getElementById("home-trending-series");
 
 
-document.getElementById("home-trending-movies").style.backgroundColor = "aqua";
-document.getElementById("home-trending-movies").style.color = "black";
+homeTrendingMoviesLink.style.backgroundColor = "aqua";
+homeTrendingMoviesLink.style.color = "black";
 document.getElementById("home-trending-series").style.backgroundColor ="black";
 document.getElementById("home-trending-series").style.color="white";
 document.getElementById("trending-series-list").style.display = "none";
 document.getElementById("trending-movies-list").style.display= "flex";
 
-homeTrendingMovies.onclick = function (){
+homeTrendingMoviesLink.onclick = function (){
 document.getElementById("home-trending-movies").style.backgroundColor = "aqua";
 document.getElementById("home-trending-movies").style.color = "black";
 document.getElementById("home-trending-series").style.backgroundColor ="black";
@@ -62,7 +62,7 @@ document.getElementById("trending-series-list").style.display = "none";
 document.getElementById("trending-movies-list").style.display= "flex";
 }
 
-homeTrendingSeries.onclick = function (){
+homeTrendingSeriesLink.onclick = function (){
 document.getElementById("home-trending-series").style.backgroundColor="aqua";
 document.getElementById("home-trending-movies").style.backgroundColor ="black";
 document.getElementById("home-trending-series").style.color ="black";
@@ -95,7 +95,7 @@ document.getElementById("series-section").style.display = "none";
 document.getElementById("movies-section").style.display= "flex";}
 
 homeTVShowsList.onclick= function(){
-document.getElementById("home-top-series").style.backgroundColor="aqua";
+home.style.backgroundColor="aqua";
 document.getElementById("home-top-movies").style.backgroundColor ="black";
 document.getElementById("home-top-series").style.color ="black";
 document.getElementById("home-top-movies").style.color ="white";
@@ -118,16 +118,19 @@ previous.onclick = function (){
     document.getElementById("trending").Child();
 }
 const toggle = document.getElementById("toggle");
+const lightBackground = document.getElementsByClassName("").backgroundColor="rgb(70,70,70)";
 
 
 toggle.onclick = function (){
-    if(document.getElementsByClassName("series-episode").backgroundColor="rgb(70,70,70)")
+    if(lightBackground=true)
          {
                 document.getElementsByClassName("series-episode").style.backgroundColor="black"
-
-
+          }
+           else{
+        lightBackground=true;
     }
-}
+    }
+
 
 
 
