@@ -1,5 +1,5 @@
 //this code is for the dialog box for the login//
-let login= document.getElementById("openDialog");
+const login= document.getElementById("openDialog");
 const loginBox = document.getElementById("dialogBox");
 const closeLogin = document.getElementById("closeDIalog");
 const loginLink1 = document.getElementById("loginLink1");
@@ -37,7 +37,6 @@ registerLink.onclick = function() {
     registerForm.style.display = "flex";
     registerForm.style.flexDirection="column";
     loginForm.style.display = recoveryForm.style.display = "none";
-
 }
 
 //Below this is for the trending section of the homepage to toggle between movies and series//
@@ -47,11 +46,12 @@ let homeTrendingSeriesLink = document.getElementById("home-trending-series");
 
 
 document.getElementById("home-trending-movies").style.backgroundColor = "aqua";
-document.getElementById("home-trending-movies").style.color = "black";
+document.getElementById("home-trending-movies").style.color= "black";
 document.getElementById("home-trending-series").style.backgroundColor ="black";
 document.getElementById("home-trending-series").style.color="white";
-document.getElementById("trending-series-list").style.display ="none";
 document.getElementById("trending-movies-list").style.display="flex";
+document.getElementById("trending-series-list").style.display ="none";
+
 
 homeTrendingMoviesLink.onclick = function (){
 document.getElementById("home-trending-movies").style.backgroundColor = "aqua";
