@@ -73,11 +73,10 @@ document.getElementById("trending-movies-list").style.display="none";
 }
 
 
+//this is for the top rated section of the homepage//
 
-
-//below is the code for the top-rated section default layout//
-let homeMovieList = document.getElementById("home-top-movies");
-let homeTVShowsList = document.getElementById("home-top-series");
+const homeMovieList = document.getElementById("home-top-movies");
+const homeTVShowsList = document.getElementById("home-top-series");
 
 document.getElementById("home-top-movies").style.backgroundColor = "aqua";
 document.getElementById("home-top-movies").style.color = "black";
@@ -99,13 +98,21 @@ home.style.backgroundColor="aqua";
 document.getElementById("home-top-movies").style.backgroundColor ="black";
 document.getElementById("home-top-series").style.color ="black";
 document.getElementById("home-top-movies").style.color ="white";
-document.getElementById("series-section").style.display = "flex";
-document.getElementById("series-section").style.flexDirection = "column";
-document.getElementById("movies-section").style.display= "none";}
+document.getElementById("series-section").style.display ="flex";
+document.getElementById("series-section").style.flexDirection ="column";
+document.getElementById("movies-section").style.display= "none";};
 
 
 
+let readMoreLink = document.getElementById("readMore");
+let readMoreP = document.getElementById("readMoreP");
 
+readMoreLink.onclick = function(){
+    if(document.getElementById("readMoreP").style.display="none"){
+    readMoreP.style.display = "flex";
+}
 
-
-
+else{
+    readMoreP.style.display ="none";
+}
+};
