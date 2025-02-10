@@ -12,7 +12,11 @@ const recoveryForm = document.getElementById("recoveryForm");
 
 login.onclick = function() {
     loginBox.showModal();
+    loginBox.style.display = "flex";
 }
+
+
+
 
 loginForm.style.display = "flex";
 login.style.flexDirection="column";
@@ -38,11 +42,6 @@ registerLink.onclick = function() {
     registerForm.style.flexDirection="column";
     loginForm.style.display = recoveryForm.style.display = "none";
 }
-//this is for the next and previous content buttons on the homepage//
-
-const next =document.getElementById("next");
-const previous =document.getElementById("previous");
-const currentTrendingClass=document.getElementById("");
 
 
 //Below this is for the trending section of the homepage to toggle between movies and series//
@@ -106,7 +105,7 @@ document.getElementById("home-top-series").style.color ="black";
 document.getElementById("home-top-movies").style.color ="white";
 document.getElementById("series-section").style.display ="flex";
 document.getElementById("series-section").style.flexDirection ="column";
-document.getElementById("movies-section").style.display= "none";};
+document.getElementById("movies-section").style.display= "none";}
 
 
 
@@ -121,4 +120,4 @@ readMoreLink.onclick = function(){
 else{
     readMoreP.style.display ="none";
 }
-};
+}
