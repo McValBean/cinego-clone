@@ -38,6 +38,12 @@ registerLink.onclick = function() {
     registerForm.style.flexDirection="column";
     loginForm.style.display = recoveryForm.style.display = "none";
 }
+//this is for the next and previous content buttons on the homepage//
+
+const next =document.getElementById("next");
+const previous =document.getElementById("previous");
+const currentTrendingClass=document.getElementById("");
+
 
 //Below this is for the trending section of the homepage to toggle between movies and series//
 
@@ -68,12 +74,12 @@ document.getElementById("home-trending-series").style.color ="black";
 document.getElementById("home-trending-movies").style.backgroundColor ="black";
 document.getElementById("home-trending-movies").style.color ="white";
 document.getElementById("trending-series-list").style.display ="flex";
-document.getElementById("trending-series-list").style.flexDirection ="column";
 document.getElementById("trending-movies-list").style.display="none";
 }
 
 
-//this is for the top rated section of the homepage//
+
+//this is for the top-rated section of the homepage//
 
 const homeMovieList = document.getElementById("home-top-movies");
 const homeTVShowsList = document.getElementById("home-top-series");
@@ -82,7 +88,7 @@ document.getElementById("home-top-movies").style.backgroundColor = "aqua";
 document.getElementById("home-top-movies").style.color = "black";
 document.getElementById("home-top-series").style.backgroundColor ="black";
 document.getElementById("home-top-series").style.color="white";
-document.getElementById("series-section").style.display = "none";
+document.getElementById("series-section").style.display ="none";
 document.getElementById("movies-section").style.display= "flex";
 
 homeMovieList.onclick = function(){
