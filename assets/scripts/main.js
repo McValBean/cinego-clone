@@ -1,7 +1,11 @@
+window.onload = function() {
+    
+
+
 //this code is for the dialog box for the login
 const login= document.getElementById("openDialog");
 const loginBox = document.getElementById("dialogBox");
-const closeLogin = document.getElementById("closeDIalog");
+const closeLogin = document.getElementById("closeDialog");
 const loginLink1 = document.getElementById("loginLink1");
 const loginLink2 = document.getElementById("loginLink2");
 const registerLink = document.getElementById("registerLink");
@@ -15,6 +19,9 @@ login.onclick = function() {
     loginBox.style.display = "flex";
 }
 
+closeLogin.onclick = function() {
+    loginBox.close();
+}
 
 
 
@@ -42,6 +49,7 @@ registerLink.onclick = function() {
     registerForm.style.flexDirection="column";
     loginForm.style.display = recoveryForm.style.display = "none";
 }
+
 
 
 //Below this is for the trending section of the homepage to toggle between movies and series//
@@ -76,48 +84,89 @@ document.getElementById("trending-series-list").style.display ="flex";
 document.getElementById("trending-movies-list").style.display="none";
 }
 
+const previous = document.getElementById("previous");
+const next = document.getElementById("next");
+
+let currentIndex = 0;
+
+
+let contentList = document.getElementsByClassName("trending-content");
+
+
+function updateDisplay() {
+    
+    for (let i = 0; i < contentList.length; i++) {
+        contentList[i].style.display = "none";  
+    }
+
+    
+    contentList[currentIndex].style.display = "flex";
+}
+
+// Initial load: show the first element (currentIndex = 0)
+window.onload = function() {
+    updateDisplay();  // Show the first element when the page loads
+};
+
+// Handle "Previous" button click
+previous.onclick = function() {
+    // Move to the previous element
+    currentIndex = (currentIndex - 1 + contentList.length) % contentList.length;
+    updateDisplay();  // Update the display
+};
+
+// Handle "Next" button click
+next.onclick = function() {
+    // Move to the next element
+    currentIndex = (currentIndex + 1) % contentList.length;
+    updateDisplay();  // Update the display
+};
 
 
 //this is for the top-rated section of the homepage//
 
 const homeMovieList = document.getElementById("home-top-movies");
 const homeTVShowsList = document.getElementById("home-top-series");
+const seriesSection = document.getElementById("series-section");
+const moviesSection = document.getElementById("movies-section");
 
-document.getElementById("home-top-movies").style.backgroundColor = "aqua";
-document.getElementById("home-top-movies").style.color = "black";
-document.getElementById("home-top-series").style.backgroundColor ="black";
-document.getElementById("home-top-series").style.color="white";
-document.getElementById("series-section").style.display ="none";
-document.getElementById("movies-section").style.display= "flex";
+// Default state
+homeMovieList.style.backgroundColor = "aqua";
+homeMovieList.style.color = "black";
+homeTVShowsList.style.backgroundColor = "black";
+homeTVShowsList.style.color = "white";
+seriesSection.style.display = "none";
+moviesSection.style.display = "flex";
 
-homeMovieList.onclick = function(){
- document.getElementById("home-top-movies").style.backgroundColor = "aqua";
- document.getElementById("home-top-movies").style.color = "black";
- document.getElementById("home-top-series").style.backgroundColor ="black";
- document.getElementById("home-top-series").style.color="white";
-document.getElementById("series-section").style.display = "none";
-document.getElementById("movies-section").style.display= "flex";}
+// Event for Movies Section
+homeMovieList.onclick = function() {
+    homeMovieList.style.backgroundColor = "aqua";
+    homeMovieList.style.color = "black";
+    homeTVShowsList.style.backgroundColor = "black";
+    homeTVShowsList.style.color = "white";
+    
+    seriesSection.style.display = "none";
+    moviesSection.style.display = "flex";
+};
 
-homeTVShowsList.onclick = function(){
-home.style.backgroundColor="aqua";
-document.getElementById("home-top-movies").style.backgroundColor ="black";
-document.getElementById("home-top-series").style.color ="black";
-document.getElementById("home-top-movies").style.color ="white";
-document.getElementById("series-section").style.display ="flex";
-document.getElementById("series-section").style.flexDirection ="column";
-document.getElementById("movies-section").style.display= "none";}
+// Event for Series Section
+homeTVShowsList.onclick = function() {
+    homeTVShowsList.style.backgroundColor = "aqua";
+    homeTVShowsList.style.color = "black";
+    homeMovieList.style.backgroundColor = "black";
+    homeMovieList.style.color = "white";
+    
+    moviesSection.style.display = "none";
+    seriesSection.style.display = "flex";
+
+    // Delay setting flexDirection
+    setTimeout(function() {
+        seriesSection.style.flexDirection = "column";
+    }, 0);
+};
 
 
 
-let readMoreLink = document.getElementById("readMore");
-let readMoreP = document.getElementById("readMoreP");
 
-readMoreLink.onclick = function(){
-    if(document.getElementById("readMoreP").style.display="none"){
-    readMoreP.style.display = "flex";
-}
 
-else{
-    readMoreP.style.display ="none";
-}
 }

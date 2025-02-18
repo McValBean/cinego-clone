@@ -13,14 +13,14 @@
             <img src="assets/images/trending-content images/breaking-bad.jpg" alt="breaking-bad" class="home-header-background" id="homeHeaderBackground">
         </div>
         <div class="blur-background">
-            <div class="black-gradient">
+            
         <nav>
             <div>
                 <a href="index.html" alt="cinego" ><img src="assets/images/cinego_image.png" alt="cinego icon"></a>
             </div>
 
-            <div class="home-searchbar">
-                <input type="text" class="searchbar" name="searchbar" placeholder="search for movies or tv series" >
+            <div>
+                <input type="text" class="home-searchbar" name="searchbar" placeholder="search for movies or tv series" >
             </div>
 
                 <a href="home.html" class="active_page">HOME</a>
@@ -88,11 +88,16 @@
 
             <div class="latest">
 
-                <ul class="trending" id="trending">
-                    <li id="1">
-                        <div class="trending-content">
-                            <div>
-                                <a href="breaking-bad.html"><img src="assets/images/trending-content images/breaking-bad.jpg" alt="breaking-bad" class="trending-content-image" id="latestImage"></a>
+                <div class="trending" id="trending">
+                    
+                        <div class="trending-content" id="1">
+                            <div class="trending-main">
+                                
+                            <img src="assets/images/trending-content images/breaking-bad.jpg" alt="breaking-bad" class="trending-content-image" id="latestImage">
+                            <a href="breaking-bad.html" alt="content-link" id="contentHomeLink">
+                            <div class="overlay-div">
+                                    <img src="assets/icons/play-icon-30.png"  alt="play-icon" class="play-content"></a>
+                                </div>
                                 
                             </div>
                             <div class="trending-content-info">
@@ -110,7 +115,6 @@
                                     <a href="breaking-bad.html" class="watch">
                                         <div class="play-icon">
                                             <img src="assets/icons/play-icon-30.png" width="20px" height="20px" class="play-icon-image" alt="play-icon">
-                                            <div class="play-icon-state"></div>
                                         </div>
                                         <div>Watch Now</div>
                                     </a>
@@ -118,12 +122,9 @@
                                 
                             </div>
                         </div>
-                    </li>
-                    <li id="2">
-                        <div class="trending-content">
+                        <div class="trending-content" id="2">
                             <div>
                                 <a href="breaking-bad.html"><img src="assets/images/trending-content images/dune-prophecy.jpg " alt="dune-prophecy" class="trending-content-image" id="latestImage"></a>
-                                
                             </div>
                             <div class="trending-content-info">
                                 <p>
@@ -148,12 +149,11 @@
                                 
                             </div>
                         </div>
-                    </li>
-                    <li id="3">
-                        <div class="trending-content">
+
+                        <div class="trending-content" id="3">
                             <div>
                                 <a href="breaking-bad.html"><img src="assets/images/trending-content images/red-one.jpg " alt="red-one" class="trending-content-image" id="latestImage"></a>
-                                
+
                             </div>
                             <div class="trending-content-info">
                                 <p>
@@ -177,19 +177,19 @@
                                 </div>
                             </div>
                         </div>
-                    </li>
-                </ul>
+                    
+                </div>
                 <div>
                     <div class="content-change">
-                        <a href="" class="change-content-button" id="previous">&gt;</a>
-                        <a href="" class="change-content-button" id="next">&lt;</a>
+                        <button class="change-content-button" id="previous" class="previous">&gt;</button>
+                        <button class="change-content-button" id="next">&lt;</button>
                     </div>
                 </div>
             </div>
-
-            <div class="linear-gradient-home-header-background">
-            <div class="trending-list">
-                <div class="trending-top">
+            <div class="black-gradient">
+                <div class="linear-gradient-home-header-background">
+                    <div class="trending-list">
+                        <div class="content-list-header">
                     <h1>Trending</h1>
                     <div>
                         <a href="#trending-movies-list" class="trending-link" id="home-trending-movies">Movies</a>
@@ -476,16 +476,254 @@
                 <div class="share-this"><img src="assets/icons/notification-bell.svg" alt="" class="icon"><span>Share This</span></div>
             </div>
 
-        </div>
         
+        <div class="latest-movies">
+            <h1 class="content-list-header">Latest Movies <a href="movies.html">&gt;</a></h1>
+            <div class="movie-list">
+                <div class="overlay_content">
+                    <img src="assets/images/movie pictures/breakup-season.jpg" alt="breakup-season" class="main_image">
+                    <div class="overlay">
+                        <div class="top-overlay">
+                            <h1>HD</h1>
+                            <span class="bookmark">+</span>
+                        </div>
+                        <div>
+                        <p class="movie_description">
+                            <span class="info">
+                                <span> Type</span>
+                                <span>Year</span>
+                            </span>
+                           <span>Breakup Season</span>
+                        </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="overlay_content">
+                    <img src="assets/images/movie pictures/f-marry-kill.jpg" alt="">
+                    <div class="overlay">
+                        <h1>HD </h1>
+                        <div>
+                        <p class="movie_description">
+                            <span class="info">
+                                <span>Type</span>
+                                <span>Year</span>
+                            </span>
+                           <span>f-marry-kill</span>
+                        </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="overlay_content">
+                    <img src="assets/images/movie pictures/camp-crasher.jpg" alt="">
+                    <div class="overlay">
+                        <h1>HD</h1>
+                        <div>
+                        <p class="movie_description">
+                            <span class="info">
+                                <span>Type</span>
+                                <span>Year</span>
+                            </span>
+                            <span>Camp crasher</span>
+                        </p>
+                    </div>
+    
+                    </div>
+                </div>
+                <div class="overlay_content">
+                    <img src="assets/images/movie pictures/mary.jpg" alt="">
+                    <div class="overlay">
+                        <h1>HD</h1>
+                        <div>
+                        <p class="movie_description">
+                            <span class="info">
+                                <span>Type</span>
+                                <span>Year</span>
+                            </span>
+                            <span>Mary</span>
+                        </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="overlay_content">
+                    <img src="assets/images/movie pictures/a-harvest-homecoming.jpg" alt="a-harvest-homecoming">
+                    <div class="overlay">
+                        <h1>HD</h1>
+                        <div>
+                        <p class="movie_description">
+                            <span class="info">
+                                <span>Type</span>
+                                <span>Year</span>
+                            </span>
+                            <span>A Harvest Homecoming</span>
+                        </p>
+                    </div>
+    
+                    </div>
+                </div>
+                <div class="overlay_content">
+                    <img src="assets/images/movie pictures/almost-paradise.jpg" alt="almost-paradise">
+                    <div class="overlay">
+                        <h1>HD</h1>
+                        <div>
+                        <p class="movie_description">
+                            <span class="info">
+                                <span>Type</span>
+                                <span>Year</span>
+                            </span>
+                            <span>Almost Paradise</span>
+                        </p>
+                    </div>
+                </div>
+                </div>
+    
+                <div class="overlay_content">
+                    <img src="assets/images/movie pictures/deck-the-walls.jpg" alt="deck-the-walls">
+                    <div class="overlay">
+                        <h1>HD</h1>
+                        <div>
+                        <p class="movie_description">
+                        <span class="info">
+                            <span>Type</span>
+                            <span>Year</span>
+                        </span>
+                        <span>Deck The Walls</span>
+                        </p>
+                    </div>
+                    </div>
+                </div>
+            
+
+        </div>
+
+        </div>
+        <div class="latest-series">
+            <h1 class="content-list-header">Latest Series <a href="tv-series.html" class="latest-link">&gt;</a></h1>
+            <div class="series-list">
+                <div class="overlay_content">
+                    <img src="assets/images/series-pictures/avatar-the-last-airbender.jpg" alt="avatar-the-last-airbender" class="main_image">
+                    <div class="overlay">
+                        <div class="overlay">
+                            <h1>HD</h1>
+                            <span class="bookmark">+</span>
+                        
+                        <p class="movie_description">
+                            <span class="info">
+                                <span>Series</span>
+                                <span>Year</span>
+                            </span>
+                           <span>Avatar the last Airbender</span>
+                        </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="overlay_content">
+                    <img src="assets/images/series-pictures/bookie.jpg" alt="bookie">
+                    <div class="overlay">
+                        <h1>HD </h1>
+                        <div>
+                        <p class="movie_description">
+                            <span class="info">
+                                <span>Series</span>
+                                <span>Year</span>
+                            </span>
+                           <span>Bookie</span>
+                        </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="overlay_content">
+                    <img src="assets/images/series-pictures/the-head.jpg" alt="the-head">
+                    <div class="overlay">
+                        <h1>HD</h1>
+                        <div>
+                        <p class="movie_description">
+                            <span class="info">
+                                <span>Series</span>
+                                <span>Year</span>
+                            </span>
+                            <span>The Head</span>
+                        </p>
+                    </div>
+    
+                    </div>
+                </div>
+                <div class="overlay_content">
+                    <img src="assets/images/series-pictures/outlander.jpg" alt="outlander">
+                    <div class="overlay">
+                        <h1>HD</h1>
+                        <div>
+                        <p class="movie_description">
+                            <span class="info">
+                                <span>Series</span>
+                                <span>Year</span>
+                            </span>
+                            <span>Outlander</span>
+                        </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="overlay_content">
+                    <img src="assets/images/series-pictures/namib.jpg" alt="Namib">
+                    <div class="overlay">
+                        <h1>HD</h1>
+                        <div>
+                        <p class="movie_description">
+                            <span class="info">
+                                <span>Series</span>
+                                <span>Year</span>
+                            </span>
+                            <span>Namib</span>
+                        </p>
+                    </div>
+    
+                    </div>
+                </div>
+                <div class="overlay_content">
+                    <img src="assets/images/series-pictures/one-piece.jpg" alt="one piece">
+                    <div class="overlay">
+                        <h1>HD</h1>
+                        <div>
+                        <p class="movie_description">
+                            <span class="info">
+                                <span>Series</span>
+                                <span>Year</span>
+                            </span>
+                            <span>One piece</span>
+                        </p>
+                    </div>
+                </div>
+                </div>
+    
+                <div class="overlay_content">
+                    <img src="assets/images/series-pictures/dan-da-dan.jpg" alt="dan-da-dan">
+                    <div class="overlay">
+                        <h1>HD</h1>
+                        <div>
+                        <p class="movie_description">
+                        <span class="info">
+                            <span>Series</span>
+                            <span>Year</span>
+                        </span>
+                        <span>Dan da dan</span>
+                        </p>
+                    </div>
+                    </div>
+                </div>
+
+        </div>
+
         </div>
         </div>
-        
+        </div>
+        </div>
         
     </header>
     <main class="home-main">
         
             <div class="top-rated-heading">
+                <script>
+                    
+                </script>
                 <div>
                     <h1>Top Rated</h1>
                     <p>Movies and Tv series are highly rated by users</p>
@@ -523,7 +761,7 @@
                     </div>
                     <div class="movie-list">
                             <div class="overlay_content">
-                                <img src="assets/images/movie pictures/breakup-season.jpg" alt="breakup-season" class="main_image">
+                                <img src="assets/images/movie pictures/breakup-season.jpg" alt="breakup-season" class="main_image" class="clip-image">
                                 <div class="overlay">
                                     <div class="top-overlay">
                                         <h1>HD</h1>
@@ -541,7 +779,7 @@
                                 </div>
                             </div>
                             <div class="overlay_content">
-                                <img src="assets/images/movie pictures/f-marry-kill.jpg" alt="">
+                                <img src="assets/images/movie pictures/f-marry-kill.jpg" alt="" class="clip-image">
                                 <div class="overlay">
                                     <h1>HD </h1>
                                     <div>
@@ -556,7 +794,7 @@
                                 </div>
                             </div>
                             <div class="overlay_content">
-                                <img src="assets/images/movie pictures/camp-crasher.jpg" alt="">
+                                <img src="assets/images/movie pictures/camp-crasher.jpg" alt="" class="clip-image">
                                 <div class="overlay">
                                     <h1>HD</h1>
                                     <div>
@@ -572,7 +810,7 @@
                                 </div>
                             </div>
                             <div class="overlay_content">
-                                <img src="assets/images/movie pictures/mary.jpg" alt="">
+                                <img src="assets/images/movie pictures/mary.jpg" alt="" class="clip-image">
                                 <div class="overlay">
                                     <h1>HD</h1>
                                     <div>
@@ -587,7 +825,7 @@
                                 </div>
                             </div>
                             <div class="overlay_content">
-                                <img src="assets/images/movie pictures/a-harvest-homecoming.jpg" alt="a-harvest-homecoming">
+                                <img src="assets/images/movie pictures/a-harvest-homecoming.jpg" alt="a-harvest-homecoming" class="clip-image">
                                 <div class="overlay">
                                     <h1>HD</h1>
                                     <div>
@@ -603,7 +841,7 @@
                                 </div>
                             </div>
                             <div class="overlay_content">
-                                <img src="assets/images/movie pictures/almost-paradise.jpg" alt="almost-paradise">
+                                <img src="assets/images/movie pictures/almost-paradise.jpg" alt="almost-paradise" class="clip-image">
                                 <div class="overlay">
                                     <h1>HD</h1>
                                     <div>
@@ -619,7 +857,7 @@
                             </div>
                 
                             <div class="overlay_content">
-                                <img src="assets/images/movie pictures/deck-the-walls.jpg" alt="deck-the-walls">
+                                <img src="assets/images/movie pictures/deck-the-walls.jpg" alt="deck-the-walls" class="clip-image">
                                 <div class="overlay">
                                     <h1>HD</h1>
                                     <div>
