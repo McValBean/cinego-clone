@@ -1,4 +1,4 @@
-window.onload = function() {
+
     
 
 
@@ -93,15 +93,17 @@ let currentIndex = 0;
 let contentList = document.getElementsByClassName("trending-content");
 
 
+
+
 function updateDisplay() {
-    
+
     for (let i = 0; i < contentList.length; i++) {
-        contentList[i].style.display = "none";  
+        contentList[i].style.display = "none";
     }
 
-    
+
     contentList[currentIndex].style.display = "flex";
-}
+};
 
 // Initial load: show the first element (currentIndex = 0)
 window.onload = function() {
@@ -113,6 +115,7 @@ previous.onclick = function() {
     // Move to the previous element
     currentIndex = (currentIndex - 1 + contentList.length) % contentList.length;
     updateDisplay();  // Update the display
+
 };
 
 // Handle "Next" button click
@@ -123,10 +126,14 @@ next.onclick = function() {
 };
 
 
+const nextList = document.getElementById("nextListButton");
+const prevList = document.getElementById("prevListButton");
+const ParentMovieList = document.getElementById("ParentMovieList");
+
 //this is for the top-rated section of the homepage//
 
 const homeMovieList = document.getElementById("home-top-movies");
-const homeTVShowsList = document.getElementById("home-top-series");
+const homeTVShowsList = document.getElementById("home-top-tv-series");
 const seriesSection = document.getElementById("series-section");
 const moviesSection = document.getElementById("movies-section");
 
@@ -144,7 +151,7 @@ homeMovieList.onclick = function() {
     homeMovieList.style.color = "black";
     homeTVShowsList.style.backgroundColor = "black";
     homeTVShowsList.style.color = "white";
-    
+
     seriesSection.style.display = "none";
     moviesSection.style.display = "flex";
 };
@@ -155,18 +162,62 @@ homeTVShowsList.onclick = function() {
     homeTVShowsList.style.color = "black";
     homeMovieList.style.backgroundColor = "black";
     homeMovieList.style.color = "white";
-    
+
     moviesSection.style.display = "none";
     seriesSection.style.display = "flex";
+    seriesSection.style.flexDirection = "column";
 
-    // Delay setting flexDirection
-    setTimeout(function() {
-        seriesSection.style.flexDirection = "column";
-    }, 0);
 };
 
 
 
 
 
+// Get all movie list links and movie lists
+const movieListLinks = document.querySelectorAll('.page-list-link');
+const movieLists = document.querySelectorAll('.movie');
+const nextListButton = document.getElementById('nextListButton');
+const prevListButton = document.getElementById('prevListButton');
+
+let currentIndex = 0; // Ensure this matches your existing variable
+
+// Function to show a specific movie list and highlight its link
+function showMovieList(index) {
+    // Hide all movie lists
+    movieLists.forEach(list => list.style.display = 'none');
+
+    // Remove active class from all links
+    movieListLinks.forEach(link => link.classList.remove('active'));
+
+    // Show the selected movie list and highlight its link
+    if (movieLists[index]) {
+        movieLists[index].style.display = 'block';
+    }
+    if (movieListLinks[index + 1]) { // +1 to skip the prev button
+        movieListLinks[index + 1].classList.add('active');
+    }
 }
+
+// Add click event listeners to movie list links
+movieListLinks.forEach((link, index) => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault(); // Prevent default anchor behavior
+        currentIndex = index - 1; // Adjust for prev button
+        showMovieList(currentIndex);
+    });
+});
+
+// Next button functionality
+nextListButton.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % movieLists.length;
+    showMovieList(currentIndex);
+});
+
+// Previous button functionality
+prevListButton.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + movieLists.length) % movieLists.length;
+    showMovieList(currentIndex);
+});
+
+// Show the first movie list by default when the page loads
+window.onload = () => showMovieList(currentIndex);

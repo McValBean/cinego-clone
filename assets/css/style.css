@@ -163,6 +163,10 @@ h1{
 .latest-movies,.latest-series{
     margin-bottom: 2%;
 }
+.latest-link{
+    color:white;
+    margin-left:1rem;
+}
 
 .series-list{
     display: none;
@@ -563,6 +567,9 @@ p {
     margin-bottom: 5%;
 }
 
+#movieList2,#movieList3,#movieList4,#movieList5{
+    display:none;
+}
 section {
     max-width: 50%;
     align-self: center;
@@ -609,6 +616,12 @@ article{
     margin-right: 1rem;
 }
 
+
+#prevListButton{
+    display:none;
+}
+
+
 .page-list-number-section{
     display: flex;
     width: 20%;
@@ -618,9 +631,20 @@ article{
     align-items: center;
 }
 
+
+.page-list-number-section :first-child {
+    background-color:aqua;
+    color: black;
+}
+
 .page-list-number-section>*{
     margin: 0 0.5rem 0 0;
 }
+#prevListButton,#nextListButton{
+    outline:none;
+    border:none;
+}
+
 .page-list-link{
 background-color: rgb(40, 40, 40);
 padding: 1rem;
@@ -634,7 +658,6 @@ font-weight: 700;
     background-color: aqua;
     color: black;
 }
-
 
 
 footer {
@@ -759,6 +782,7 @@ footer {
     flex-wrap: wrap;
     width: 96%;
     justify-self: center;
+    margin-bottom: 5rem;
 }
 
 .overlay_content {
