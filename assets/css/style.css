@@ -617,10 +617,6 @@ article{
 }
 
 
-#prevListButton{
-    display:none;
-}
-
 
 .page-list-number-section{
     display: flex;
@@ -632,7 +628,7 @@ article{
 }
 
 
-.page-list-number-section :first-child {
+.page-list-number-section a:first-of-type{
     background-color:aqua;
     color: black;
 }
