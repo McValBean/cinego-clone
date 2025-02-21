@@ -88,8 +88,7 @@
         <h1 class="content-list-header">MOVIE LIST <span><img src="assets/icons/funnel.png" alt="filter" height="2%" width="2%"></span></h1>
 
 
-        <div class="movie" id="movieList1">
-        <div class="movie-list">
+        <div class="movie-list" id="movieList1">
             <div class="overlay_content">
                 <img src="assets/images/movie pictures/breakup-season.jpg" alt="breakup-season" class="main_image">
                 <div class="overlay">
@@ -264,10 +263,10 @@
 
 
         </div>
-    </div>
-    <div class="movie" id="movieList2">
 
-    <div class="movie-list">
+
+
+    <div class="movie-list" id="movieList2">
         <div class="overlay_content">
             <img src="assets/images/movie pictures/anora.jpg" alt="">
             <div class="overlay">
@@ -405,10 +404,10 @@
         </div>
 
     </div>
-</div>
-<div class="movie" id="movieList3">
+
+
    
-<div class="movie-list">
+<div class="movie-list" id="movieList3">
     <div class="overlay_content">
         <img src="assets/images/movie pictures/camp-crasher.jpg" alt="">
         <div class="overlay">
@@ -534,10 +533,10 @@
 
 
 </div>
-</div>
-<div class="movie" id="movieList4">
-   
-<div class="movie-list">
+
+
+
+<div class="movie-list" id="movieList4">
     
    
     
@@ -649,10 +648,10 @@
 
 
 </div>
-</div>
-<div class="movie" id="movieList5">
 
-<div class="movie-list">
+
+
+<div class="movie-list" id="movieList5">
 
     <div class="overlay_content">
         <img src="assets/images/movie pictures/a-harvest-homecoming.jpg" alt="a-harvest-homecoming">
@@ -764,7 +763,7 @@
 
 
 </div>
-</div>
+
 
     <div class="page-list-number-section">
         <button class="page-list-link" id="prevListButton"> &lt&lt;</button>
@@ -775,6 +774,47 @@
         <a href="#movieList5" alt="" class="page-list-link" id="movieListLink5">5</a>
         <button class="page-list-link" id="nextListButton">&gt&gt;</button>
     </div>
+    <script>
+        // Movie List Links and Previous/Next Buttons
+const movieListLink1 = document.getElementById("movieListLink1");
+const movieListLink2 = document.getElementById("movieListLink2");
+const movieListLink3 = document.getElementById("movieListLink3");
+const movieListLink4 = document.getElementById("movieListLink4");
+const movieListLink5 = document.getElementById("movieListLink5");
+const nextListButton = document.getElementById("nextListButton");
+const prevListButton = document.getElementById("prevListButton");
+const movieLinks = document.querySelectorAll("[id^='movieListLink']");
+const movieLists = document.querySelectorAll("[id^='movieList']");
+
+let currentIndexMovieList = 0;
+
+function updateMovieList(index) {
+    movieLinks.forEach((link, i) => {
+        link.style.backgroundColor = i === index ? "aqua" : "rgb(30,30,30)";
+        link.style.color = i === index ? "black" : "white";
+        movieLists[i].style.display = i === index ? "flex" : "none";
+    });
+}
+
+updateMovieList(currentIndexMovieList);
+
+movieLinks.forEach((link, index) => {
+    link.onclick = () => {
+        currentIndexMovieList = index;
+        updateMovieList(currentIndexMovieList);
+    };
+});
+
+nextListButton.onclick = () => {
+    currentIndexMovieList = (currentIndexMovieList + 1) % movieLists.length;
+    updateMovieList(currentIndexMovieList);
+};
+
+prevListButton.onclick = () => {
+    currentIndexMovieList = (currentIndexMovieList - 1 + movieLists.length) % movieLists.length;
+    updateMovieList(currentIndexMovieList);
+};
+    </script>
 
 
     </main>
