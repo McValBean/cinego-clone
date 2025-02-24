@@ -20,7 +20,7 @@
                 <a href="home.html" class="top_link">HOME</a>
                 <a href="movies.html" class="top_link">MOVIES</a>
                 <a href="tv-series.html" class="top_link">TV SERIES</a>
-                <a href="top-imdb.html" class="top_link">TOP IMBD</a>
+                <a href="top-imdb.html" class="top_link">TOP IMDb</a>
 
                 <div>
                     <button id="openDialog" class="login">Login</button>
@@ -145,7 +145,9 @@
             </span>
         </div>
         <div class="comment-header">
-            <span class="comment-number">2 comments <script></script></span>
+            <span class="comment-number" id="commentNumber">
+               
+            </span>
             <span class="login-for-comment"><a href="">Login</a></span>
         </div>
         <hr size="3px">
@@ -157,13 +159,52 @@
                 </label>
                 <div id="commentBox" class="comment-box">
                     <div>
-                        <div id="commentSection" class="comment-section"></div>
+                        <textarea id="commentSectionInput" class="comment-section" placeholder="start the discussion"></textarea>
                     </div>
                     <hr class="comment-box-hr">
-                    <div >
-                        <button type="submit" class="comment-button">Comment</button>
+                    <div>
+                        <button type="submit" class="comment-button" id="commentButton">Comment</button>
                     </div>
                 </div>
+            </div>
+            <div id="commentSectionOutput">
+                <script>
+                     let commentNumberSpan =document.getElementById("commentNumber");
+                   
+                    const commentButton = document.getElementById("commentButton");
+                    const commentSectionInput = document.getElementById("commentSectionInput");
+                    const commentSectionOutput = document.getElementById("commentSectionOutput");
+                    let commentArray =[];
+                    commentNumberSpan.innerText = commentArray.length +" "+ "comments";
+                    let commentList = document.getElementById("commentList");
+                    commentList = commentArray;
+                    const listItem = document.getElementById("listItem");
+                    
+                    commentButton.onclick = function (){
+                        if(commentSectionInput.value==""){
+                            alert("Don't be dumb, type something!!");
+                        
+                        
+                        }
+                        else{
+                      commentArray.push(commentSectionInput.value);
+                      console.log(commentArray[commentArray.length-1]);
+                      console.log(commentArray);
+                      console.log(commentArray.length);
+                      commentNumberSpan.innerText = commentArray.length +" "+ "comments";
+                      commentSectionInput.value="";
+                      commentSectionOutput.innerHTML=commentArray.map( comment => `<li>${comment}</li>`)
+                      .join("");
+                    }
+                }
+                
+            
+
+  </script>
+
+                <ul class="comment-list" id="commentList">
+                   
+                </ul>
             </div>
         </div>
     </div>
