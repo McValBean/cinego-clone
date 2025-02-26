@@ -16,11 +16,14 @@
             <div>
                 <input type="text" class="searchbar" name="searchbar" placeholder="search for movies or tv series" >
             </div>
-
+            <div class="nav-links">
                 <a href="home.html" class="top_link">HOME</a>
                 <a href="movies.html" class="top_link">MOVIES</a>
                 <a href="tv-series.html" class="top_link">TV SERIES</a>
                 <a href="top-imdb.html" class="top_link">TOP IMDb</a>
+
+            </div>
+                
 
                 <div>
                     <button id="openDialog" class="login">Login</button>
@@ -85,6 +88,7 @@
     
     <main>
         <div class="movie-watch-background" id="movieWatchBackground">
+            
         <div class="movie-watch-div">
             <div class="movie-watch-header">
                 <span>Gladiador-II</span>
@@ -107,7 +111,7 @@
                     <span class="server-note">If current servers don't work please try the servers above</span>
                 </span>
                 <span class="toggle-watch-comment">
-                    <a href="" class="toggle-watch-comment-links">Toggle light</a>
+                    <a href="" class="toggle-watch-comment-links" id="toggleMovie">Toggle light</a>
                     <a href="" class="toggle-watch-comment-links"><img src="" alt="">Watch list</a>
                     <a href="#commentBox" class="toggle-watch-comment-links"><img src="" alt="">Comment</a>
                 </span>
@@ -120,35 +124,56 @@
             <span>
                 <h3>What do you think?</h3>
             </span>
-            <span>
-                152 responses<script></script>
+            <span id="responseNumberDiv">
+                <script>
+                    let responseNumber = document.getElementById("responseNumberDiv");
+                    const emojis = document.getElementById('[id^="Emoji"]');
+                    const upvoteEmoji= document.getElementById("upvoteEmoji");
+                    const funnyEmoji = document.getElementById("funnyEmoji");
+                    const loveEmoji = document.getElementById("loveEmoji");
+                    const surprisedEmoji = document.getElementById("surprisedEmoji");
+                    const angryEmoji = document.getElementById("angryEmoji");
+                    const sadEmoji = document.getElementById("sadEmoji");
+                    let count = 0;
+                    responseNumber.innerHTML= count +"  "+ "responses";
+                    emojis.onclick = function(){
+                        count++;
+                        console.log(count);
+                    }
+                </script>
             </span>
-            <span>
-                <span>
-                    <img src="assets/icons/emojis/upvote.png" alt="upvote" width="48px" height="48px" class="emoji">
+            <div class="emoji-div">
+                <span class="emoji-span" class="emoji" id="upvoteEmoji">
+                    <img src="assets/icons/emojis/upvote.png" alt="upvote" width="48px" height="48px" >
+                    <span>upvote</span>
                 </span>
-                <span>
-                    <img src="assets/icons/emojis/funny.png" alt="funny" width="48px" height="48px" class="emoji">
+                <span class="emoji-span" class="emoji" id="funnyEmoji">
+                    <img src="assets/icons/emojis/funny.png" alt="funny" width="48px" height="48px" >
+                    <span>funny</span>
                 </span>
-                <span>
-                    <img src="assets/icons/emojis/love.png" alt="love" width="48px" height="48px" class="emoji">
+                <span class="emoji-span" class="emoji" id="loveEmoji">
+                    <img src="assets/icons/emojis/love.png" alt="love" width="48px" height="48px" >
+                    <span>love</span>
                 </span>
-                <span>
-                    <img src="assets/icons/emojis/surprised.png" alt="surprised" width="48px" height="48px" class="emoji">
+                <span class="emoji-span" class="emoji" id="surprisedEmoji">
+                    <img src="assets/icons/emojis/surprised.png" alt="surprised" width="48px" height="48px" >
+                    <span>surprised</span>
                 </span>
-                <span>
-                    <img src="assets/icons/emojis/angry.png" alt="angry" width="48px" height="48px" class="emoji">
+                <span class="emoji-span" class="emoji" id="angryEmoji">
+                    <img src="assets/icons/emojis/angry.png" alt="angry" width="48px" height="48px" >
+                    <span>angry</span>
                 </span>
-                <span>
-                    <img src="assets/icons/emojis/sad.png" alt="sad" width="48px" height="48px" class="emoji">
+                <span class="emoji-span" class="emoji" id="sadEmoji">
+                    <img src="assets/icons/emojis/sad.png" alt="sad" width="48px" height="48px" >
+                    <span>sad</span>
                 </span>
-            </span>
+            </div>
         </div>
         <div class="comment-header">
             <span class="comment-number" id="commentNumber">
                
             </span>
-            <span class="login-for-comment"><a href="">Login</a></span>
+            <span class="login-for-comment"><a href="" id="loginComment">Login</a></span>
         </div>
         <hr size="3px">
 
@@ -166,11 +191,32 @@
                         <button type="submit" class="comment-button" id="commentButton">Comment</button>
                     </div>
                 </div>
+                
+            </div>
+            <div class="comment-login-method">
+                <div class="first-login-options">
+                    <span>Log In With</span>
+                    <div>
+                        <img src="assets/icons/fb-icon.png" width="30rem" height="30rem" alt="">
+                        <img src="assets/icons/" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="assets/icons/microsoft-icon.png" width="30rem" height="30rem" alt="">
+                        <img src="assets/icons/apple-inc.svg" width="30rem" height="30rem" alt="">
+                    </div>
+                </div>
+                <div class="disqus-only-option">
+                    <span>Or Sign Up With Disqus</span>
+                    <div class="disqus-signup">
+                        <input type="text" placeholder="Name">
+                        <input type="text" placeholder="Email">
+                        <input type="text" placeholder="Password">
+                    </div>
+                </div>
             </div>
             <div id="commentSectionOutput">
                 <script>
                      let commentNumberSpan =document.getElementById("commentNumber");
-                   
                     const commentButton = document.getElementById("commentButton");
                     const commentSectionInput = document.getElementById("commentSectionInput");
                     const commentSectionOutput = document.getElementById("commentSectionOutput");
@@ -179,6 +225,7 @@
                     let commentList = document.getElementById("commentList");
                     commentList = commentArray;
                     const listItem = document.getElementById("listItem");
+                    console.log();
                     
                     commentButton.onclick = function (){
                         if(commentSectionInput.value==""){
@@ -187,16 +234,17 @@
                         
                         }
                         else{
-                      commentArray.push(commentSectionInput.value);
+                      commentArray.push(commentSectionInput.value +" "+ new Date().toLocaleString());
                       console.log(commentArray[commentArray.length-1]);
                       console.log(commentArray);
                       console.log(commentArray.length);
                       commentNumberSpan.innerText = commentArray.length +" "+ "comments";
                       commentSectionInput.value="";
-                      commentSectionOutput.innerHTML=commentArray.map( comment => `<li>${comment}</li>`)
+                      commentSectionOutput.innerHTML=commentArray.map(comment => `<li> ${comment}</li>`)
                       .join("");
                     }
                 }
+                
                 
             
 
@@ -206,9 +254,138 @@
                    
                 </ul>
             </div>
+            
+        </div>
+        <hr size="3px">
+        <div class="comment-section-bottom">
+            <div class="comment-section-bottom-links">
+                <div class="comment-section-bottom-link"><img src="" alt=""><span>Subscribe</span></div>
+                <div class="comment-section-bottom-link"><img src="" alt=""><span>Privacy</span></div>
+                <div class="comment-section-bottom-link"><img src="" alt=""><span>Do Not Sell My Data</span></div>
+            </div>
+            <div><a href="" id="disqusLink">DISQUS</a></div>
         </div>
     </div>
+    <div>
+            <h1 class="content-list-header"><span>You May Also Like</span></h1>
+            <div class="movie-list">
+                <div class="overlay_content">
+                    <img src="assets/images/movie pictures/breakup-season.jpg" alt="breakup-season" class="main_image">
+                    <div class="overlay">
+                        <div class="top-overlay">
+                            <h1>HD</h1>
+                            <span class="bookmark">+</span>
+                        </div>
+                        <div>
+                        <p class="movie_description">
+                            <span class="info">
+                                <span> Type</span>
+                                <span>Year</span>
+                            </span>
+                           <span>Breakup Season</span>
+                        </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="overlay_content">
+                    <img src="assets/images/movie pictures/f-marry-kill.jpg" alt="">
+                    <div class="overlay">
+                        <h1>HD </h1>
+                        <div>
+                        <p class="movie_description">
+                            <span class="info">
+                                <span>Type</span>
+                                <span>Year</span>
+                            </span>
+                           <span>f-marry-kill</span>
+                        </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="overlay_content">
+                    <img src="assets/images/movie pictures/camp-crasher.jpg" alt="">
+                    <div class="overlay">
+                        <h1>HD</h1>
+                        <div>
+                        <p class="movie_description">
+                            <span class="info">
+                                <span>Type</span>
+                                <span>Year</span>
+                            </span>
+                            <span>Camp crasher</span>
+                        </p>
+                    </div>
+    
+                    </div>
+                </div>
+                <div class="overlay_content">
+                    <img src="assets/images/movie pictures/mary.jpg" alt="">
+                    <div class="overlay">
+                        <h1>HD</h1>
+                        <div>
+                        <p class="movie_description">
+                            <span class="info">
+                                <span>Type</span>
+                                <span>Year</span>
+                            </span>
+                            <span>Mary</span>
+                        </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="overlay_content">
+                    <img src="assets/images/movie pictures/a-harvest-homecoming.jpg" alt="a-harvest-homecoming">
+                    <div class="overlay">
+                        <h1>HD</h1>
+                        <div>
+                        <p class="movie_description">
+                            <span class="info">
+                                <span>Type</span>
+                                <span>Year</span>
+                            </span>
+                            <span>A Harvest Homecoming</span>
+                        </p>
+                    </div>
+    
+                    </div>
+                </div>
+                <div class="overlay_content">
+                    <img src="assets/images/movie pictures/almost-paradise.jpg" alt="almost-paradise">
+                    <div class="overlay">
+                        <h1>HD</h1>
+                        <div>
+                        <p class="movie_description">
+                            <span class="info">
+                                <span>Type</span>
+                                <span>Year</span>
+                            </span>
+                            <span>Almost Paradise</span>
+                        </p>
+                    </div>
+                </div>
+                </div>
+    
+                <div class="overlay_content">
+                    <img src="assets/images/movie pictures/deck-the-walls.jpg" alt="deck-the-walls">
+                    <div class="overlay">
+                        <h1>HD</h1>
+                        <div>
+                        <p class="movie_description">
+                        <span class="info">
+                            <span>Type</span>
+                            <span>Year</span>
+                        </span>
+                        <span>Deck The Walls</span>
+                        </p>
+                    </div>
+                    </div>
+                </div>
+            
 
+        </div>
+
+        </div>
+    </div>
 
     </main>
     <footer>
